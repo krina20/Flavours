@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+body {
+    /* border: 2px solid black; */
+    background-color: #f2f0ea;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 26px;
+    color: #666;
+    font-weight: 400;
+}
+
+
+/* --------------------------------Header start---------------------------- */
+
+nav {
+    background: transparent;
+    height: 80px;
+    width: 100%;
+}
+
+nav ul {
+    float: right;
+    margin-right: 60px;
+    /* padding: 50px; */
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0px;
+}
+
+nav ul li a {
+    color: white;
+    padding: 7px 13px;
+    font-size: 17px;
+    border-radius: 3px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.logo {
+    color: whitesmoke;
+    font-family: Oswald, sans-serif;
+    cursor: pointer;
+    padding-top: 45px;
+    padding-left: 90px;
+    float: left;
+}
+
+a:hover {
+    /* background: rgba(0, 0, 0, 0.8); */
+    color: burlywood;
+    transition: .5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 952px) {
+    .logo {
+        margin-left: -70px;
+        font-size: 30px;
+        margin-top: -20px;
+    }
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block
+    }
+    nav ul {
+        position: fixed;
+        width: 50%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.8);
+        top: 80px;
+        left: -120%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    a:hover,
+    a.active {
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked~ul {
+        left: 0;
+    }
+}
+
+
+/* --------------------------------Header end---------------------------- */
+
+.slide_img {
+    width: 100%;
+    height: 400px;
+    z-index: -1;
+    margin-top: -80px;
+    background-image: url("./Images/Menu/slide_img.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+.title {
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Century Gothic';
+    font-weight: 700;
+    font-size: 50px;
+    padding-top: 200px;
+    /* display: inline-block; */
+    /* position: relative; */
+    color: #fff;
+    z-index: 2;
+}
+
+
+/* --------------------------------menu section start---------------------------- */
+
+.menu_container {
+    width: 100%;
+    padding-bottom: 30px;
+    /* display: table;
+    table-layout: fixed; */
+}
+
+.menu_table {
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 35px;
+    letter-spacing: -0.5px;
+    font-family: Oswald, sans-serif;
+    color: #30271c;
+    margin-bottom: 15px;
+    line-height: 1.5em;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.left_menu_tbl,
+.right_menu_tbl {
+    width: 46%;
+}
+
+h3 {
+    font-size: 22px;
+    /* letter-spacing: px; */
+    line-height: 1.5em;
+    font-family: Oswald, sans-serif;
+    color: #30271c;
+    font-weight: 700;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+h3 span {
+    float: right !important;
+}
+
+.menu_img img {
+    width: 70px;
+    height: 70px;
+    display: block;
+}
+
+.menu_item_details {
+    margin-left: 100px;
+}
+
+.item_des {
+    color: #c7a17a;
+    float: left;
+    /* width: auto; */
+    width: 100%;
+    line-height: 1.2em;
+}
+
+.label_holder {
+    float: right;
+    position: relative;
+    width: 30%;
+    padding-right: 20px;
+    text-align: right;
+}
+
+.label_holder .label_txt {
+    background-color: #c7a17a;
+    color: #30271c;
+    float: right;
+    font-family: Merriweather, serif;
+    font-style: italic;
+    padding: 3px 13px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.menu_table li {
+    list-style-type: none;
+    padding-bottom: 20px;
+}
+
+hr {
+    border: 2px solid #c7a17a;
+    width: 10%;
+    margin: 0 auto;
+    /* align-content: center;
+    text-align: center;
+    justify-items: center;
+    justify-content: center; */
+    /* vertical-align: middle;*/
+}
+
+.middle-img {
+    background-image: url(./Images/Menu/middle-img.jpg);
+    background-size: cover;
+    height: 400px;
+    z-index: -1;
+    background-attachment: fixed;
+    padding-top: 100px;
+    padding-right: 100px;
+}
+
+@media screen and (max-width:900px) {
+    .menu_img {
+        display: none;
+    }
+}
+
+@media screen and (max-width:850px) {
+    .left_menu_tbl,
+    .right_menu_tbl {
+        width: 100%;
+        margin-left: -100px;
+    }
+}
+
+
+/* --------------------------------menu section end---------------------------- */
+
+
+/* --------------------------------Footer start---------------------------- */
+
+.footer_container {
+    background: url("./Images/footer-img.jpg");
+    background-size: cover;
+    z-index: 1;
+}
+
+.footer_item {
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: row;
+    /* justify-content: center; */
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.footer_item div {
+    padding: 10px;
+}
+
+.details li {
+    text-decoration: none;
+}
+
+.footer_container .title {
+    font-family: Oswald, sans-serif;
+    color: #fff;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 19px;
+    line-height: 1.3em;
+}
+
+.footer_container .opening_hours .day {
+    font-size: 14px;
+    line-height: 33px;
+    text-transform: uppercase;
+    text-align: left;
+    font-weight: 700;
+    color: #fff;
+}
+
+.copyright_sec {
+    background-color: black;
+    height: 20%;
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer-cafe {
+    width: 40%;
+    padding-top: 10px;
+}
+
+.icons {
+    padding-left: 20px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.icons i {
+    padding: 20px 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .footer_item {
+        flex-flow: column;
+        text-align: center;
+    }
+    .footer_container .title {
+        font-size: 15px;
+    }
+    .footer_container .opening_hours .day {
+        font-size: 12px;
+    }
+    .copyright_sec {
+        flex-flow: column;
+    }
+    .footer-cafe {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/* --------------------------------Footer end---------------------------- */

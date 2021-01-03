@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+body {
+    /* border: 2px solid black; */
+    background-color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 26px;
+    color: #666;
+    font-weight: 400;
+}
+
+
+/* --------------------------------Header start---------------------------- */
+
+nav {
+    background: transparent;
+    height: 80px;
+    width: 100%;
+}
+
+nav ul {
+    float: right;
+    margin-right: 60px;
+    /* padding: 50px; */
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0px;
+}
+
+nav ul li a {
+    color: white;
+    padding: 7px 13px;
+    font-size: 17px;
+    border-radius: 3px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.logo {
+    color: whitesmoke;
+    font-family: Oswald, sans-serif;
+    cursor: pointer;
+    padding-top: 45px;
+    padding-left: 90px;
+    float: left;
+}
+
+a:hover {
+    /* background: rgba(0, 0, 0, 0.8); */
+    color: burlywood;
+    transition: .5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 952px) {
+    .logo {
+        margin-left: -70px;
+        font-size: 30px;
+        margin-top: -20px;
+    }
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block
+    }
+    ul {
+        position: fixed;
+        width: 50%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.8);
+        top: 80px;
+        left: -120%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    a:hover,
+    a.active {
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked~ul {
+        left: 0;
+    }
+}
+
+
+/* --------------------------------Header end---------------------------- */
+
+.slide_img {
+    width: 100%;
+    height: 400px;
+    z-index: -1;
+    margin-top: -80px;
+    background-image: url("./Images/Menu/slide_img.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+.title {
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Century Gothic';
+    font-weight: 700;
+    font-size: 50px;
+    padding-top: 200px;
+    /* display: inline-block; */
+    /* position: relative; */
+    color: #fff;
+    z-index: 2;
+}
+
+
+/* --------------------------------menu section start---------------------------- */
+
+.aboutme_container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    /* display: table;
+    table-layout: fixed; */
+}
+
+.sides {
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.left_side {
+    width: 40%;
+}
+
+.right_side {
+    width: 50%;
+}
+
+.left_side img {
+    width: 500px;
+    height: 500px;
+}
+
+h2 {
+    font-size: 35px;
+    letter-spacing: -0.5px;
+    font-family: Oswald, sans-serif;
+    color: #30271c;
+    margin-bottom: 15px;
+    line-height: 1.5em;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.quote {
+    position: relative;
+    display: table;
+    padding: 9px 0 9px 33px;
+    border-left: 3px solid #c7a17a;
+}
+
+.quote .quote_txt {
+    /* display: table-cell;
+    vertical-align: middle; */
+    font-style: italic;
+    font-family: Merriweather, serif;
+    text-transform: none;
+    font-size: 20px;
+    line-height: 33px;
+    color: #30271c;
+}
+
+@media screen and (max-width:1290px) {
+    .left_side img {
+        height: 300px;
+        width: 300px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .left_side img {
+        height: 300px;
+        width: 300px;
+        margin-left: -40px;
+    }
+    .right_side {
+        margin-top: 300px;
+        padding: 0px;
+        margin-left: -90px;
+    }
+}
+
+
+/* --------------------------------menu section end---------------------------- */
+
+
+/* --------------------------------Footer start---------------------------- */
+
+.footer_container {
+    background: url("./Images/footer-img.jpg");
+    background-size: cover;
+    z-index: 1;
+}
+
+.footer_item {
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: row;
+    /* justify-content: center; */
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.footer_item div {
+    padding: 10px;
+}
+
+.details li {
+    text-decoration: none;
+}
+
+.footer_container .title {
+    font-family: Oswald, sans-serif;
+    color: #fff;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 19px;
+    line-height: 1.3em;
+}
+
+.footer_container .opening_hours .day {
+    font-size: 14px;
+    line-height: 33px;
+    text-transform: uppercase;
+    text-align: left;
+    font-weight: 700;
+    color: #fff;
+}
+
+.copyright_sec {
+    background-color: black;
+    height: 20%;
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer-cafe {
+    width: 40%;
+    padding-top: 10px;
+}
+
+.icons {
+    padding-left: 20px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.icons i {
+    padding: 20px 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .footer_item {
+        flex-flow: column;
+        text-align: center;
+    }
+    .footer_container .title {
+        font-size: 15px;
+    }
+    .footer_container .opening_hours .day {
+        font-size: 12px;
+    }
+    .copyright_sec {
+        flex-flow: column;
+    }
+    .footer-cafe {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/* --------------------------------Footer end---------------------------- */
